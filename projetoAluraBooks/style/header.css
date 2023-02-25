@@ -2,6 +2,140 @@
 .cabecalho__menu-hamburguer{
     width: 24px;
     height: 24px;
-    background-color: url(../assets/Menu.svg);
-   
+    background-image: url(../assets/Menu.svg);
+    background-repeat: no-repeat;
+    background-position: 0%;
+}
+.cabecalho { 
+    width: 100%;
+    display: flex;
+    background-color: var(--branco);
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+.container__left{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+}
+
+.container__right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 2%;
+    gap: 10px;
+
+}
+
+.cabecalho__image{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lista-menu{
+    display: none;
+    position: absolute;
+    list-style: none;
+    top:100%;
+  
+    z-index: 10;
+}
+
+.container__botao:checked~.lista-menu{
+    display: block;
+
+}
+
+.lista-menu__item,.lista-menu__titulo {
+    padding: 1em;
+    background-color: var(--branco);
+}
+.lista-menu__titulo{
+    size: 2em;
+    color: var(--laranja);
+}
+.lista-menu__link{
+    color: var(--gradiente);
+    text-transform: uppercase;
+ 
+}
+
+.container__botao{
+    display: none;
+}
+
+.container__titulo{
+display: none}
+
+.opcoes{
+    display: none;
+}
+
+
+
+@media screen and (min-width:1024px) {
+    .container__titulo, .conteiner__titulo--negrito {
+        font-family: var(--font-secundaria);
+        font-size: 30px;
+    }
+    .container__titulo{
+        font-weight: 400;
+        display: block;
+    }
+    .container__titulo--negrito{
+        font-weight: 700;
+    }
+    .cabecalho__image{
+        display: none;
+    }
+ 
+    .opcoes__lista__link{
+        color: var(--gradiente)
+    }
+    .container__left{
+        margin:1em;
+    }
+    .opcoes__botao{
+        display: none;
+    }
+    .opcoes{
+        display: flex;
+        width: 34%;
+        justify-content: space-between;
+        text-transform: uppercase;
+        text-decoration: none;
+
+    }
+    .lista-menu__item{
+        color: var(--font-secundaria);
+    }
+    .cabecalho__menu-hamburguer{
+        display: none;
+    }
+    .coracao{
+        display: none;
+    }
+    .opcoes__botao:checked ~ .lista-menu{
+        display:block;
+    }
+  
+}
+
+@media screen and (min-width:1728px) {
+    .opcoes{
+     
+        width: 12%;
+        margin-right:auto;
+        margin-left: 2%;
+    }
 }
