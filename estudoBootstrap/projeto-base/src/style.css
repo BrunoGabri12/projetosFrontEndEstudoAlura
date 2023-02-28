@@ -1,0 +1,44 @@
+:root{
+    --font-primaria : "Pacifico";
+}
+
+.logo{
+    font-family: var(--font-primaria);
+    color: brown;
+}
+
+.imagem__carousel { 
+    object-fit: cover;
+    object-position: 0 80%;
+    height: 800px;
+}
+ 
+
+.fonte-titulo{
+    font-family: var(--font-primaria);
+    color: brown;
+}
+
+.btn-detalhes {
+    background-color: brown;
+    color: white;
+}
+
+.borda-card {
+    border-color: brown;
+    width: 18rem;
+}
+
+.card-posicao-img{
+    object-fit: cover;
+    height: 200px;
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) { 
+
+    .imagem__carousel{
+        height: 400px;
+        object-position: 0 20%;
+    }
+
+ }
